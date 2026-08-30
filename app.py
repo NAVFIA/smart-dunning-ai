@@ -50,7 +50,7 @@ st.markdown("""
         margin-top: 4px;
     }
 </style>
-""", unsafe_style_html=True)
+""", unsafe_allow_html=True)
 
 # App Title & Header
 st.title("⚡ SmartDunning AI Recovery Dashboard")
@@ -143,7 +143,7 @@ with col1:
         <div class="metric-value">₹{total_at_risk:,.2f}</div>
         <div class="metric-sub" style="color: #94A3B8;">{len(filtered_df)} failed txs</div>
     </div>
-    """, unsafe_style_html=True)
+    """, unsafe_allow_html=True)
 
 with col2:
     st.markdown(f"""
@@ -152,7 +152,7 @@ with col2:
         <div class="metric-value">₹{gross_savings:,.2f}</div>
         <div class="metric-sub">{len(recovered_df)} txs recovered</div>
     </div>
-    """, unsafe_style_html=True)
+    """, unsafe_allow_html=True)
 
 with col3:
     st.markdown(f"""
@@ -161,7 +161,7 @@ with col3:
         <div class="metric-value">₹{total_costs:,.2f}</div>
         <div class="metric-sub" style="color: #F43F5E;">Guardrails saved ₹{len(skipped_df)*1.50:.1f}+</div>
     </div>
-    """, unsafe_style_html=True)
+    """, unsafe_allow_html=True)
 
 with col4:
     st.markdown(f"""
@@ -170,7 +170,7 @@ with col4:
         <div class="metric-value" style="color: #10B981;">₹{net_profit_saved:,.2f}</div>
         <div class="metric-sub">ROI: {((gross_savings/total_costs)*100 if total_costs > 0 else 0):,.1f}%</div>
     </div>
-    """, unsafe_style_html=True)
+    """, unsafe_allow_html=True)
 
 with col5:
     st.markdown(f"""
@@ -179,7 +179,7 @@ with col5:
         <div class="metric-value">{recovery_rate_pct:.1f}%</div>
         <div class="metric-sub" style="color: #6366F1;">Value Recov: {value_recovery_pct:.1f}%</div>
     </div>
-    """, unsafe_style_html=True)
+    """, unsafe_allow_html=True)
 
 st.write("")
 
