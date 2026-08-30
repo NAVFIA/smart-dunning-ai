@@ -1,0 +1,2690 @@
+[
+    {
+        "transaction_id": "pay_R193349856",
+        "customer_name": "Arjun Mehta",
+        "customer_phone": "+919906402157",
+        "customer_email": "arjun.mehta@example.com",
+        "amount": 1602.01,
+        "failure_category": "USER_BALANCE",
+        "failure_reason": "INSUFFICIENT_FUNDS",
+        "timestamp": "2026-08-23T23:56:04.332617",
+        "status": "FAILED",
+        "total_cost": 1.75,
+        "attempts_made": 3,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_BALANCE_REMINDER",
+                "cost": 1.5,
+                "probability": 0.45,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "EMAIL_BALANCE_REMINDER",
+                "cost": 0.05,
+                "probability": 0.22,
+                "success": false
+            },
+            {
+                "attempt": 3,
+                "action": "SMS_BALANCE_REMINDER",
+                "cost": 0.2,
+                "probability": 0.08,
+                "success": false
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_W797808098",
+        "customer_name": "Kiara Sharma",
+        "customer_phone": "+919410529190",
+        "customer_email": "kiara.sharma@example.com",
+        "amount": 15.24,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "CUSTOMER_CLOSED_CHECKOUT",
+        "timestamp": "2026-08-24T00:57:04.332617",
+        "status": "SKIPPED",
+        "total_cost": 0.0,
+        "attempts_made": 0,
+        "history": [
+            {
+                "attempt": 0,
+                "action": "SKIP",
+                "cost": 0.0,
+                "probability": 0.0,
+                "success": false,
+                "reason": "Amount Rs 15.24 is below Rs 50.00 threshold"
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_K398362082",
+        "customer_name": "Aarav Reddy",
+        "customer_phone": "+919998485882",
+        "customer_email": "aarav.reddy@example.com",
+        "amount": 175.19,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "CUSTOMER_CLOSED_CHECKOUT",
+        "timestamp": "2026-08-24T02:48:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.5,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_LINK",
+                "cost": 1.5,
+                "probability": 0.6,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_Z146654552",
+        "customer_name": "Ananya Choudhary",
+        "customer_phone": "+919592983555",
+        "customer_email": "ananya.choudhary@example.com",
+        "amount": 220.97,
+        "failure_category": "TECHNICAL_TRANSIENT",
+        "failure_reason": "GATEWAY_DOWNTIME",
+        "timestamp": "2026-08-24T04:13:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 0.0,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "AUTO_RETRY",
+                "cost": 0.0,
+                "probability": 0.7,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_L719927151",
+        "customer_name": "Aadhya Singh",
+        "customer_phone": "+919699987374",
+        "customer_email": "aadhya.singh@example.com",
+        "amount": 2203.4,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "CUSTOMER_CLOSED_CHECKOUT",
+        "timestamp": "2026-08-24T06:12:04.332617",
+        "status": "FAILED",
+        "total_cost": 1.75,
+        "attempts_made": 3,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_LINK",
+                "cost": 1.5,
+                "probability": 0.6,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "SMS_LINK",
+                "cost": 0.2,
+                "probability": 0.32,
+                "success": false
+            },
+            {
+                "attempt": 3,
+                "action": "EMAIL_LINK",
+                "cost": 0.05,
+                "probability": 0.1,
+                "success": false
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_I586845604",
+        "customer_name": "Aditya Rao",
+        "customer_phone": "+917433797840",
+        "customer_email": "aditya.rao@example.com",
+        "amount": 3978.81,
+        "failure_category": "USER_BALANCE",
+        "failure_reason": "INSUFFICIENT_FUNDS",
+        "timestamp": "2026-08-24T07:33:04.332617",
+        "status": "FAILED",
+        "total_cost": 1.75,
+        "attempts_made": 3,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_BALANCE_REMINDER",
+                "cost": 1.5,
+                "probability": 0.45,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "EMAIL_BALANCE_REMINDER",
+                "cost": 0.05,
+                "probability": 0.22,
+                "success": false
+            },
+            {
+                "attempt": 3,
+                "action": "SMS_BALANCE_REMINDER",
+                "cost": 0.2,
+                "probability": 0.08,
+                "success": false
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_F673528321",
+        "customer_name": "Ishaan Gupta",
+        "customer_phone": "+919616197747",
+        "customer_email": "ishaan.gupta@example.com",
+        "amount": 144.28,
+        "failure_category": "USER_BALANCE",
+        "failure_reason": "INSUFFICIENT_FUNDS",
+        "timestamp": "2026-08-24T09:25:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.75,
+        "attempts_made": 3,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_BALANCE_REMINDER",
+                "cost": 1.5,
+                "probability": 0.45,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "EMAIL_BALANCE_REMINDER",
+                "cost": 0.05,
+                "probability": 0.22,
+                "success": false
+            },
+            {
+                "attempt": 3,
+                "action": "SMS_BALANCE_REMINDER",
+                "cost": 0.2,
+                "probability": 0.08,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_Y933223566",
+        "customer_name": "Aadhya Rao",
+        "customer_phone": "+919940395823",
+        "customer_email": "aadhya.rao@example.com",
+        "amount": 495.29,
+        "failure_category": "TECHNICAL_TRANSIENT",
+        "failure_reason": "GATEWAY_DOWNTIME",
+        "timestamp": "2026-08-24T10:41:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 0.0,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "AUTO_RETRY",
+                "cost": 0.0,
+                "probability": 0.7,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_W437882805",
+        "customer_name": "Aditya Nair",
+        "customer_phone": "+919436019774",
+        "customer_email": "aditya.nair@example.com",
+        "amount": 2305.24,
+        "failure_category": "TECHNICAL_TRANSIENT",
+        "failure_reason": "BANK_SYSTEM_TIMEOUT",
+        "timestamp": "2026-08-24T12:53:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 0.0,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "AUTO_RETRY",
+                "cost": 0.0,
+                "probability": 0.7,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_X702764446",
+        "customer_name": "Arjun Joshi",
+        "customer_phone": "+917599707677",
+        "customer_email": "arjun.joshi@example.com",
+        "amount": 3392.83,
+        "failure_category": "USER_BALANCE",
+        "failure_reason": "ACCOUNT_LIMIT_EXCEEDED",
+        "timestamp": "2026-08-24T13:48:04.332617",
+        "status": "FAILED",
+        "total_cost": 1.75,
+        "attempts_made": 3,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_BALANCE_REMINDER",
+                "cost": 1.5,
+                "probability": 0.45,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "EMAIL_BALANCE_REMINDER",
+                "cost": 0.05,
+                "probability": 0.22,
+                "success": false
+            },
+            {
+                "attempt": 3,
+                "action": "SMS_BALANCE_REMINDER",
+                "cost": 0.2,
+                "probability": 0.08,
+                "success": false
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_P197613238",
+        "customer_name": "Ananya Rao",
+        "customer_phone": "+917594130308",
+        "customer_email": "ananya.rao@example.com",
+        "amount": 312.59,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "CHOSE_TO_CANCEL",
+        "timestamp": "2026-08-24T15:41:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.7,
+        "attempts_made": 2,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_LINK",
+                "cost": 1.5,
+                "probability": 0.6,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "SMS_LINK",
+                "cost": 0.2,
+                "probability": 0.32,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_M739830322",
+        "customer_name": "Pihu Yadav",
+        "customer_phone": "+917272849424",
+        "customer_email": "pihu.yadav@example.com",
+        "amount": 121.99,
+        "failure_category": "TECHNICAL_TRANSIENT",
+        "failure_reason": "BANK_SYSTEM_TIMEOUT",
+        "timestamp": "2026-08-24T17:09:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 0.0,
+        "attempts_made": 2,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "AUTO_RETRY",
+                "cost": 0.0,
+                "probability": 0.7,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "AUTO_RETRY",
+                "cost": 0.0,
+                "probability": 0.62,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_U465260635",
+        "customer_name": "Vihaan Mishra",
+        "customer_phone": "+918146005448",
+        "customer_email": "vihaan.mishra@example.com",
+        "amount": 551.66,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "CHOSE_TO_CANCEL",
+        "timestamp": "2026-08-24T19:10:04.332617",
+        "status": "FAILED",
+        "total_cost": 1.75,
+        "attempts_made": 3,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_LINK",
+                "cost": 1.5,
+                "probability": 0.6,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "SMS_LINK",
+                "cost": 0.2,
+                "probability": 0.32,
+                "success": false
+            },
+            {
+                "attempt": 3,
+                "action": "EMAIL_LINK",
+                "cost": 0.05,
+                "probability": 0.1,
+                "success": false
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_D771410971",
+        "customer_name": "Ishaan Iyer",
+        "customer_phone": "+917767303988",
+        "customer_email": "ishaan.iyer@example.com",
+        "amount": 479.22,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "CUSTOMER_CLOSED_CHECKOUT",
+        "timestamp": "2026-08-24T20:29:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.5,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_LINK",
+                "cost": 1.5,
+                "probability": 0.6,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_K624636385",
+        "customer_name": "Aadhya Iyer",
+        "customer_phone": "+917002456273",
+        "customer_email": "aadhya.iyer@example.com",
+        "amount": 393.13,
+        "failure_category": "USER_BALANCE",
+        "failure_reason": "INSUFFICIENT_FUNDS",
+        "timestamp": "2026-08-24T22:11:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.55,
+        "attempts_made": 2,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_BALANCE_REMINDER",
+                "cost": 1.5,
+                "probability": 0.45,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "EMAIL_BALANCE_REMINDER",
+                "cost": 0.05,
+                "probability": 0.22,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_S184564737",
+        "customer_name": "Shaurya Rao",
+        "customer_phone": "+917248786714",
+        "customer_email": "shaurya.rao@example.com",
+        "amount": 4242.49,
+        "failure_category": "TECHNICAL_TRANSIENT",
+        "failure_reason": "GATEWAY_DOWNTIME",
+        "timestamp": "2026-08-24T23:24:04.332617",
+        "status": "FAILED",
+        "total_cost": 0.2,
+        "attempts_made": 3,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "AUTO_RETRY",
+                "cost": 0.0,
+                "probability": 0.7,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "AUTO_RETRY",
+                "cost": 0.0,
+                "probability": 0.62,
+                "success": false
+            },
+            {
+                "attempt": 3,
+                "action": "SMS_ALERT",
+                "cost": 0.2,
+                "probability": 0.24,
+                "success": false
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_R277303722",
+        "customer_name": "Arjun Patel",
+        "customer_phone": "+919833608204",
+        "customer_email": "arjun.patel@example.com",
+        "amount": 2897.18,
+        "failure_category": "USER_BALANCE",
+        "failure_reason": "INSUFFICIENT_FUNDS",
+        "timestamp": "2026-08-25T01:15:04.332617",
+        "status": "FAILED",
+        "total_cost": 1.75,
+        "attempts_made": 3,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_BALANCE_REMINDER",
+                "cost": 1.5,
+                "probability": 0.45,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "EMAIL_BALANCE_REMINDER",
+                "cost": 0.05,
+                "probability": 0.22,
+                "success": false
+            },
+            {
+                "attempt": 3,
+                "action": "SMS_BALANCE_REMINDER",
+                "cost": 0.2,
+                "probability": 0.08,
+                "success": false
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_V797801251",
+        "customer_name": "Aadhya Nair",
+        "customer_phone": "+918338811290",
+        "customer_email": "aadhya.nair@example.com",
+        "amount": 145.31,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "CHOSE_TO_CANCEL",
+        "timestamp": "2026-08-25T02:46:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.5,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_LINK",
+                "cost": 1.5,
+                "probability": 0.6,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_R347083812",
+        "customer_name": "Aditya Kumar",
+        "customer_phone": "+917090341465",
+        "customer_email": "aditya.kumar@example.com",
+        "amount": 161.56,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "CHOSE_TO_CANCEL",
+        "timestamp": "2026-08-25T04:34:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.7,
+        "attempts_made": 2,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_LINK",
+                "cost": 1.5,
+                "probability": 0.6,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "SMS_LINK",
+                "cost": 0.2,
+                "probability": 0.32,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_Q355555531",
+        "customer_name": "Aditya Verma",
+        "customer_phone": "+918419179580",
+        "customer_email": "aditya.verma@example.com",
+        "amount": 764.93,
+        "failure_category": "TECHNICAL_TRANSIENT",
+        "failure_reason": "BANK_SYSTEM_TIMEOUT",
+        "timestamp": "2026-08-25T05:37:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 0.0,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "AUTO_RETRY",
+                "cost": 0.0,
+                "probability": 0.7,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_Z607850824",
+        "customer_name": "Riya Pandey",
+        "customer_phone": "+919030106617",
+        "customer_email": "riya.pandey@example.com",
+        "amount": 375.51,
+        "failure_category": "USER_BALANCE",
+        "failure_reason": "INSUFFICIENT_FUNDS",
+        "timestamp": "2026-08-25T07:24:04.332617",
+        "status": "FAILED",
+        "total_cost": 1.75,
+        "attempts_made": 3,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_BALANCE_REMINDER",
+                "cost": 1.5,
+                "probability": 0.45,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "EMAIL_BALANCE_REMINDER",
+                "cost": 0.05,
+                "probability": 0.22,
+                "success": false
+            },
+            {
+                "attempt": 3,
+                "action": "SMS_BALANCE_REMINDER",
+                "cost": 0.2,
+                "probability": 0.08,
+                "success": false
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_X158165865",
+        "customer_name": "Pihu Chatterjee",
+        "customer_phone": "+919005855667",
+        "customer_email": "pihu.chatterjee@example.com",
+        "amount": 23.97,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "CUSTOMER_CLOSED_CHECKOUT",
+        "timestamp": "2026-08-25T09:40:04.332617",
+        "status": "SKIPPED",
+        "total_cost": 0.0,
+        "attempts_made": 0,
+        "history": [
+            {
+                "attempt": 0,
+                "action": "SKIP",
+                "cost": 0.0,
+                "probability": 0.0,
+                "success": false,
+                "reason": "Amount Rs 23.97 is below Rs 50.00 threshold"
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_R581695135",
+        "customer_name": "Vihaan Rao",
+        "customer_phone": "+917822873088",
+        "customer_email": "vihaan.rao@example.com",
+        "amount": 37.04,
+        "failure_category": "USER_BALANCE",
+        "failure_reason": "INSUFFICIENT_FUNDS",
+        "timestamp": "2026-08-25T10:33:04.332617",
+        "status": "SKIPPED",
+        "total_cost": 0.0,
+        "attempts_made": 0,
+        "history": [
+            {
+                "attempt": 0,
+                "action": "SKIP",
+                "cost": 0.0,
+                "probability": 0.0,
+                "success": false,
+                "reason": "Amount Rs 37.04 is below Rs 50.00 threshold"
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_B800235246",
+        "customer_name": "Aditya Sen",
+        "customer_phone": "+919363629219",
+        "customer_email": "aditya.sen@example.com",
+        "amount": 443.52,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "OTP_PAGE_ABANDONED",
+        "timestamp": "2026-08-25T12:03:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.7,
+        "attempts_made": 2,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_LINK",
+                "cost": 1.5,
+                "probability": 0.6,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "SMS_LINK",
+                "cost": 0.2,
+                "probability": 0.32,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_G530613729",
+        "customer_name": "Sai Chatterjee",
+        "customer_phone": "+919085812759",
+        "customer_email": "sai.chatterjee@example.com",
+        "amount": 4319.13,
+        "failure_category": "USER_BALANCE",
+        "failure_reason": "INSUFFICIENT_FUNDS",
+        "timestamp": "2026-08-25T14:03:04.332617",
+        "status": "FAILED",
+        "total_cost": 1.75,
+        "attempts_made": 3,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_BALANCE_REMINDER",
+                "cost": 1.5,
+                "probability": 0.45,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "EMAIL_BALANCE_REMINDER",
+                "cost": 0.05,
+                "probability": 0.22,
+                "success": false
+            },
+            {
+                "attempt": 3,
+                "action": "SMS_BALANCE_REMINDER",
+                "cost": 0.2,
+                "probability": 0.08,
+                "success": false
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_X941128035",
+        "customer_name": "Prisha Singh",
+        "customer_phone": "+918816803306",
+        "customer_email": "prisha.singh@example.com",
+        "amount": 1693.41,
+        "failure_category": "TECHNICAL_TRANSIENT",
+        "failure_reason": "BANK_SYSTEM_TIMEOUT",
+        "timestamp": "2026-08-25T15:53:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 0.0,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "AUTO_RETRY",
+                "cost": 0.0,
+                "probability": 0.7,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_X436730606",
+        "customer_name": "Vivaan Pandey",
+        "customer_phone": "+919328710672",
+        "customer_email": "vivaan.pandey@example.com",
+        "amount": 183.52,
+        "failure_category": "USER_BALANCE",
+        "failure_reason": "ACCOUNT_LIMIT_EXCEEDED",
+        "timestamp": "2026-08-25T16:48:04.332617",
+        "status": "FAILED",
+        "total_cost": 1.75,
+        "attempts_made": 3,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_BALANCE_REMINDER",
+                "cost": 1.5,
+                "probability": 0.45,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "EMAIL_BALANCE_REMINDER",
+                "cost": 0.05,
+                "probability": 0.22,
+                "success": false
+            },
+            {
+                "attempt": 3,
+                "action": "SMS_BALANCE_REMINDER",
+                "cost": 0.2,
+                "probability": 0.08,
+                "success": false
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_F173574218",
+        "customer_name": "Sai Verma",
+        "customer_phone": "+919181106786",
+        "customer_email": "sai.verma@example.com",
+        "amount": 433.72,
+        "failure_category": "TECHNICAL_TRANSIENT",
+        "failure_reason": "GATEWAY_DOWNTIME",
+        "timestamp": "2026-08-25T18:26:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 0.0,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "AUTO_RETRY",
+                "cost": 0.0,
+                "probability": 0.7,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_B765055833",
+        "customer_name": "Riya Rao",
+        "customer_phone": "+919486438403",
+        "customer_email": "riya.rao@example.com",
+        "amount": 473.72,
+        "failure_category": "TECHNICAL_TRANSIENT",
+        "failure_reason": "BANK_SYSTEM_TIMEOUT",
+        "timestamp": "2026-08-25T20:35:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 0.0,
+        "attempts_made": 2,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "AUTO_RETRY",
+                "cost": 0.0,
+                "probability": 0.7,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "AUTO_RETRY",
+                "cost": 0.0,
+                "probability": 0.62,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_K356287095",
+        "customer_name": "Ishaan Nair",
+        "customer_phone": "+919876451163",
+        "customer_email": "ishaan.nair@example.com",
+        "amount": 192.37,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "CHOSE_TO_CANCEL",
+        "timestamp": "2026-08-25T22:18:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.5,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_LINK",
+                "cost": 1.5,
+                "probability": 0.6,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_S207354053",
+        "customer_name": "Aditya Sharma",
+        "customer_phone": "+918968321319",
+        "customer_email": "aditya.sharma@example.com",
+        "amount": 2557.51,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "CHOSE_TO_CANCEL",
+        "timestamp": "2026-08-25T23:48:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.5,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_LINK",
+                "cost": 1.5,
+                "probability": 0.6,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_F570497096",
+        "customer_name": "Aditya Rao",
+        "customer_phone": "+918587106770",
+        "customer_email": "aditya.rao@example.com",
+        "amount": 469.97,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "CHOSE_TO_CANCEL",
+        "timestamp": "2026-08-26T01:03:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.5,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_LINK",
+                "cost": 1.5,
+                "probability": 0.6,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_R421455482",
+        "customer_name": "Saanvi Sharma",
+        "customer_phone": "+919868450609",
+        "customer_email": "saanvi.sharma@example.com",
+        "amount": 4942.55,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "OTP_PAGE_ABANDONED",
+        "timestamp": "2026-08-26T03:13:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.7,
+        "attempts_made": 2,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_LINK",
+                "cost": 1.5,
+                "probability": 0.6,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "SMS_LINK",
+                "cost": 0.2,
+                "probability": 0.32,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_T326161867",
+        "customer_name": "Aadhya Patel",
+        "customer_phone": "+918169726681",
+        "customer_email": "aadhya.patel@example.com",
+        "amount": 450.37,
+        "failure_category": "TECHNICAL_TRANSIENT",
+        "failure_reason": "BANK_SYSTEM_TIMEOUT",
+        "timestamp": "2026-08-26T04:15:04.332617",
+        "status": "FAILED",
+        "total_cost": 0.2,
+        "attempts_made": 3,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "AUTO_RETRY",
+                "cost": 0.0,
+                "probability": 0.7,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "AUTO_RETRY",
+                "cost": 0.0,
+                "probability": 0.62,
+                "success": false
+            },
+            {
+                "attempt": 3,
+                "action": "SMS_ALERT",
+                "cost": 0.2,
+                "probability": 0.24,
+                "success": false
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_U554811020",
+        "customer_name": "Ira Joshi",
+        "customer_phone": "+917218179599",
+        "customer_email": "ira.joshi@example.com",
+        "amount": 1687.93,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "CHOSE_TO_CANCEL",
+        "timestamp": "2026-08-26T05:38:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.5,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_LINK",
+                "cost": 1.5,
+                "probability": 0.6,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_W559225330",
+        "customer_name": "Ishaan Reddy",
+        "customer_phone": "+918897669065",
+        "customer_email": "ishaan.reddy@example.com",
+        "amount": 108.87,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "CUSTOMER_CLOSED_CHECKOUT",
+        "timestamp": "2026-08-26T07:44:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.5,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_LINK",
+                "cost": 1.5,
+                "probability": 0.6,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_L725464884",
+        "customer_name": "Arjun Mishra",
+        "customer_phone": "+917154739678",
+        "customer_email": "arjun.mishra@example.com",
+        "amount": 3609.59,
+        "failure_category": "TECHNICAL_TRANSIENT",
+        "failure_reason": "BANK_SYSTEM_TIMEOUT",
+        "timestamp": "2026-08-26T09:38:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 0.0,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "AUTO_RETRY",
+                "cost": 0.0,
+                "probability": 0.7,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_H816114302",
+        "customer_name": "Vivaan Choudhary",
+        "customer_phone": "+917902271852",
+        "customer_email": "vivaan.choudhary@example.com",
+        "amount": 21.04,
+        "failure_category": "TECHNICAL_TRANSIENT",
+        "failure_reason": "BANK_SYSTEM_TIMEOUT",
+        "timestamp": "2026-08-26T11:04:04.332617",
+        "status": "SKIPPED",
+        "total_cost": 0.0,
+        "attempts_made": 0,
+        "history": [
+            {
+                "attempt": 0,
+                "action": "SKIP",
+                "cost": 0.0,
+                "probability": 0.0,
+                "success": false,
+                "reason": "Amount Rs 21.04 is below Rs 50.00 threshold"
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_F958872154",
+        "customer_name": "Kiara Patel",
+        "customer_phone": "+918016779084",
+        "customer_email": "kiara.patel@example.com",
+        "amount": 2328.7,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "CHOSE_TO_CANCEL",
+        "timestamp": "2026-08-26T12:52:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.7,
+        "attempts_made": 2,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_LINK",
+                "cost": 1.5,
+                "probability": 0.6,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "SMS_LINK",
+                "cost": 0.2,
+                "probability": 0.32,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_X970535450",
+        "customer_name": "Diya Chatterjee",
+        "customer_phone": "+919877229210",
+        "customer_email": "diya.chatterjee@example.com",
+        "amount": 37.41,
+        "failure_category": "TECHNICAL_TRANSIENT",
+        "failure_reason": "GATEWAY_DOWNTIME",
+        "timestamp": "2026-08-26T14:28:04.332617",
+        "status": "SKIPPED",
+        "total_cost": 0.0,
+        "attempts_made": 0,
+        "history": [
+            {
+                "attempt": 0,
+                "action": "SKIP",
+                "cost": 0.0,
+                "probability": 0.0,
+                "success": false,
+                "reason": "Amount Rs 37.41 is below Rs 50.00 threshold"
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_O475442872",
+        "customer_name": "Ira Rao",
+        "customer_phone": "+917857158768",
+        "customer_email": "ira.rao@example.com",
+        "amount": 442.48,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "CHOSE_TO_CANCEL",
+        "timestamp": "2026-08-26T16:01:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.7,
+        "attempts_made": 2,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_LINK",
+                "cost": 1.5,
+                "probability": 0.6,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "SMS_LINK",
+                "cost": 0.2,
+                "probability": 0.32,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_C930353157",
+        "customer_name": "Aanya Kumar",
+        "customer_phone": "+918196591018",
+        "customer_email": "aanya.kumar@example.com",
+        "amount": 347.01,
+        "failure_category": "USER_BALANCE",
+        "failure_reason": "INSUFFICIENT_FUNDS",
+        "timestamp": "2026-08-26T17:40:04.332617",
+        "status": "FAILED",
+        "total_cost": 1.75,
+        "attempts_made": 3,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_BALANCE_REMINDER",
+                "cost": 1.5,
+                "probability": 0.45,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "EMAIL_BALANCE_REMINDER",
+                "cost": 0.05,
+                "probability": 0.22,
+                "success": false
+            },
+            {
+                "attempt": 3,
+                "action": "SMS_BALANCE_REMINDER",
+                "cost": 0.2,
+                "probability": 0.08,
+                "success": false
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_I291735734",
+        "customer_name": "Aadhya Kumar",
+        "customer_phone": "+917118543408",
+        "customer_email": "aadhya.kumar@example.com",
+        "amount": 491.52,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "CHOSE_TO_CANCEL",
+        "timestamp": "2026-08-26T18:28:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.5,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_LINK",
+                "cost": 1.5,
+                "probability": 0.6,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_Q224173718",
+        "customer_name": "Ananya Kumar",
+        "customer_phone": "+918874297457",
+        "customer_email": "ananya.kumar@example.com",
+        "amount": 31.25,
+        "failure_category": "AUTHENTICATION_HARD",
+        "failure_reason": "CARD_BLOCKED_BY_ISSUER",
+        "timestamp": "2026-08-26T20:35:04.332617",
+        "status": "SKIPPED",
+        "total_cost": 0.0,
+        "attempts_made": 0,
+        "history": [
+            {
+                "attempt": 0,
+                "action": "SKIP",
+                "cost": 0.0,
+                "probability": 0.0,
+                "success": false,
+                "reason": "Amount Rs 31.25 is below Rs 50.00 threshold"
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_X896662826",
+        "customer_name": "Aarav Iyer",
+        "customer_phone": "+919312633708",
+        "customer_email": "aarav.iyer@example.com",
+        "amount": 368.95,
+        "failure_category": "AUTHENTICATION_HARD",
+        "failure_reason": "CARD_EXPIRED",
+        "timestamp": "2026-08-26T22:16:04.332617",
+        "status": "FAILED",
+        "total_cost": 1.75,
+        "attempts_made": 3,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "EMAIL_UPDATE_METHOD",
+                "cost": 0.05,
+                "probability": 0.28,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "WHATSAPP_UPDATE_METHOD",
+                "cost": 1.5,
+                "probability": 0.14,
+                "success": false
+            },
+            {
+                "attempt": 3,
+                "action": "SMS_UPDATE_METHOD",
+                "cost": 0.2,
+                "probability": 0.05,
+                "success": false
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_D872830248",
+        "customer_name": "Diya Yadav",
+        "customer_phone": "+918348257414",
+        "customer_email": "diya.yadav@example.com",
+        "amount": 476.99,
+        "failure_category": "USER_BALANCE",
+        "failure_reason": "ACCOUNT_LIMIT_EXCEEDED",
+        "timestamp": "2026-08-26T23:51:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.5,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_BALANCE_REMINDER",
+                "cost": 1.5,
+                "probability": 0.45,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_N813962536",
+        "customer_name": "Shaurya Mishra",
+        "customer_phone": "+917546696950",
+        "customer_email": "shaurya.mishra@example.com",
+        "amount": 231.08,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "CHOSE_TO_CANCEL",
+        "timestamp": "2026-08-27T00:57:04.332617",
+        "status": "FAILED",
+        "total_cost": 1.75,
+        "attempts_made": 3,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_LINK",
+                "cost": 1.5,
+                "probability": 0.6,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "SMS_LINK",
+                "cost": 0.2,
+                "probability": 0.32,
+                "success": false
+            },
+            {
+                "attempt": 3,
+                "action": "EMAIL_LINK",
+                "cost": 0.05,
+                "probability": 0.1,
+                "success": false
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_G561588882",
+        "customer_name": "Aadhya Sharma",
+        "customer_phone": "+918305132983",
+        "customer_email": "aadhya.sharma@example.com",
+        "amount": 1854.27,
+        "failure_category": "USER_BALANCE",
+        "failure_reason": "INSUFFICIENT_FUNDS",
+        "timestamp": "2026-08-27T02:39:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.55,
+        "attempts_made": 2,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_BALANCE_REMINDER",
+                "cost": 1.5,
+                "probability": 0.45,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "EMAIL_BALANCE_REMINDER",
+                "cost": 0.05,
+                "probability": 0.22,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_Z890232588",
+        "customer_name": "Reyansh Iyer",
+        "customer_phone": "+919032319170",
+        "customer_email": "reyansh.iyer@example.com",
+        "amount": 248.97,
+        "failure_category": "USER_BALANCE",
+        "failure_reason": "ACCOUNT_LIMIT_EXCEEDED",
+        "timestamp": "2026-08-27T04:47:04.332617",
+        "status": "FAILED",
+        "total_cost": 1.75,
+        "attempts_made": 3,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_BALANCE_REMINDER",
+                "cost": 1.5,
+                "probability": 0.45,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "EMAIL_BALANCE_REMINDER",
+                "cost": 0.05,
+                "probability": 0.22,
+                "success": false
+            },
+            {
+                "attempt": 3,
+                "action": "SMS_BALANCE_REMINDER",
+                "cost": 0.2,
+                "probability": 0.08,
+                "success": false
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_J341206079",
+        "customer_name": "Diya Gupta",
+        "customer_phone": "+918008752943",
+        "customer_email": "diya.gupta@example.com",
+        "amount": 334.82,
+        "failure_category": "USER_BALANCE",
+        "failure_reason": "ACCOUNT_LIMIT_EXCEEDED",
+        "timestamp": "2026-08-27T06:16:04.332617",
+        "status": "FAILED",
+        "total_cost": 1.75,
+        "attempts_made": 3,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_BALANCE_REMINDER",
+                "cost": 1.5,
+                "probability": 0.45,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "EMAIL_BALANCE_REMINDER",
+                "cost": 0.05,
+                "probability": 0.22,
+                "success": false
+            },
+            {
+                "attempt": 3,
+                "action": "SMS_BALANCE_REMINDER",
+                "cost": 0.2,
+                "probability": 0.08,
+                "success": false
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_U718121922",
+        "customer_name": "Kiara Gupta",
+        "customer_phone": "+918955997540",
+        "customer_email": "kiara.gupta@example.com",
+        "amount": 48.29,
+        "failure_category": "TECHNICAL_TRANSIENT",
+        "failure_reason": "BANK_SYSTEM_TIMEOUT",
+        "timestamp": "2026-08-27T07:35:04.332617",
+        "status": "SKIPPED",
+        "total_cost": 0.0,
+        "attempts_made": 0,
+        "history": [
+            {
+                "attempt": 0,
+                "action": "SKIP",
+                "cost": 0.0,
+                "probability": 0.0,
+                "success": false,
+                "reason": "Amount Rs 48.29 is below Rs 50.00 threshold"
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_F963406382",
+        "customer_name": "Aarav Mehta",
+        "customer_phone": "+918825989011",
+        "customer_email": "aarav.mehta@example.com",
+        "amount": 159.79,
+        "failure_category": "USER_BALANCE",
+        "failure_reason": "ACCOUNT_LIMIT_EXCEEDED",
+        "timestamp": "2026-08-27T08:59:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.5,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_BALANCE_REMINDER",
+                "cost": 1.5,
+                "probability": 0.45,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_O816806128",
+        "customer_name": "Vihaan Sen",
+        "customer_phone": "+917572687073",
+        "customer_email": "vihaan.sen@example.com",
+        "amount": 462.86,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "CUSTOMER_CLOSED_CHECKOUT",
+        "timestamp": "2026-08-27T11:12:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.5,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_LINK",
+                "cost": 1.5,
+                "probability": 0.6,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_R578796089",
+        "customer_name": "Kiara Iyer",
+        "customer_phone": "+918832837596",
+        "customer_email": "kiara.iyer@example.com",
+        "amount": 4511.42,
+        "failure_category": "AUTHENTICATION_HARD",
+        "failure_reason": "CARD_BLOCKED_BY_ISSUER",
+        "timestamp": "2026-08-27T12:50:04.332617",
+        "status": "FAILED",
+        "total_cost": 1.75,
+        "attempts_made": 3,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "EMAIL_UPDATE_METHOD",
+                "cost": 0.05,
+                "probability": 0.28,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "WHATSAPP_UPDATE_METHOD",
+                "cost": 1.5,
+                "probability": 0.14,
+                "success": false
+            },
+            {
+                "attempt": 3,
+                "action": "SMS_UPDATE_METHOD",
+                "cost": 0.2,
+                "probability": 0.05,
+                "success": false
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_H394846763",
+        "customer_name": "Ishaan Iyer",
+        "customer_phone": "+919081328344",
+        "customer_email": "ishaan.iyer@example.com",
+        "amount": 388.3,
+        "failure_category": "USER_BALANCE",
+        "failure_reason": "ACCOUNT_LIMIT_EXCEEDED",
+        "timestamp": "2026-08-27T14:13:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.5,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_BALANCE_REMINDER",
+                "cost": 1.5,
+                "probability": 0.45,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_H511281012",
+        "customer_name": "Aadhya Gupta",
+        "customer_phone": "+917594312071",
+        "customer_email": "aadhya.gupta@example.com",
+        "amount": 201.13,
+        "failure_category": "TECHNICAL_TRANSIENT",
+        "failure_reason": "GATEWAY_DOWNTIME",
+        "timestamp": "2026-08-27T15:18:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 0.0,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "AUTO_RETRY",
+                "cost": 0.0,
+                "probability": 0.7,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_G994310083",
+        "customer_name": "Aadhya Sen",
+        "customer_phone": "+918785736751",
+        "customer_email": "aadhya.sen@example.com",
+        "amount": 22.93,
+        "failure_category": "TECHNICAL_TRANSIENT",
+        "failure_reason": "BANK_SYSTEM_TIMEOUT",
+        "timestamp": "2026-08-27T16:48:04.332617",
+        "status": "SKIPPED",
+        "total_cost": 0.0,
+        "attempts_made": 0,
+        "history": [
+            {
+                "attempt": 0,
+                "action": "SKIP",
+                "cost": 0.0,
+                "probability": 0.0,
+                "success": false,
+                "reason": "Amount Rs 22.93 is below Rs 50.00 threshold"
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_L420632895",
+        "customer_name": "Riya Das",
+        "customer_phone": "+919048612358",
+        "customer_email": "riya.das@example.com",
+        "amount": 587.89,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "CHOSE_TO_CANCEL",
+        "timestamp": "2026-08-27T18:21:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.5,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_LINK",
+                "cost": 1.5,
+                "probability": 0.6,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_I567975319",
+        "customer_name": "Kiara Rao",
+        "customer_phone": "+919096929657",
+        "customer_email": "kiara.rao@example.com",
+        "amount": 380.59,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "OTP_PAGE_ABANDONED",
+        "timestamp": "2026-08-27T20:11:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.7,
+        "attempts_made": 2,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_LINK",
+                "cost": 1.5,
+                "probability": 0.6,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "SMS_LINK",
+                "cost": 0.2,
+                "probability": 0.32,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_R128955006",
+        "customer_name": "Sai Sen",
+        "customer_phone": "+917548157187",
+        "customer_email": "sai.sen@example.com",
+        "amount": 4091.64,
+        "failure_category": "TECHNICAL_TRANSIENT",
+        "failure_reason": "GATEWAY_DOWNTIME",
+        "timestamp": "2026-08-27T22:12:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 0.0,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "AUTO_RETRY",
+                "cost": 0.0,
+                "probability": 0.7,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_M451492250",
+        "customer_name": "Prisha Reddy",
+        "customer_phone": "+917215970859",
+        "customer_email": "prisha.reddy@example.com",
+        "amount": 23.86,
+        "failure_category": "USER_BALANCE",
+        "failure_reason": "INSUFFICIENT_FUNDS",
+        "timestamp": "2026-08-27T23:25:04.332617",
+        "status": "SKIPPED",
+        "total_cost": 0.0,
+        "attempts_made": 0,
+        "history": [
+            {
+                "attempt": 0,
+                "action": "SKIP",
+                "cost": 0.0,
+                "probability": 0.0,
+                "success": false,
+                "reason": "Amount Rs 23.86 is below Rs 50.00 threshold"
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_A904258674",
+        "customer_name": "Pihu Joshi",
+        "customer_phone": "+917351784589",
+        "customer_email": "pihu.joshi@example.com",
+        "amount": 2206.07,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "OTP_PAGE_ABANDONED",
+        "timestamp": "2026-08-28T01:15:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.5,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_LINK",
+                "cost": 1.5,
+                "probability": 0.6,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_A767154083",
+        "customer_name": "Vivaan Sharma",
+        "customer_phone": "+918062073697",
+        "customer_email": "vivaan.sharma@example.com",
+        "amount": 80.88,
+        "failure_category": "TECHNICAL_TRANSIENT",
+        "failure_reason": "GATEWAY_DOWNTIME",
+        "timestamp": "2026-08-28T02:33:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 0.0,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "AUTO_RETRY",
+                "cost": 0.0,
+                "probability": 0.7,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_L280162221",
+        "customer_name": "Reyansh Sen",
+        "customer_phone": "+918100558303",
+        "customer_email": "reyansh.sen@example.com",
+        "amount": 3037.86,
+        "failure_category": "TECHNICAL_TRANSIENT",
+        "failure_reason": "GATEWAY_DOWNTIME",
+        "timestamp": "2026-08-28T04:46:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 0.0,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "AUTO_RETRY",
+                "cost": 0.0,
+                "probability": 0.7,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_J718257024",
+        "customer_name": "Shaurya Mehta",
+        "customer_phone": "+919485432021",
+        "customer_email": "shaurya.mehta@example.com",
+        "amount": 1236.95,
+        "failure_category": "USER_BALANCE",
+        "failure_reason": "INSUFFICIENT_FUNDS",
+        "timestamp": "2026-08-28T05:34:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.5,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_BALANCE_REMINDER",
+                "cost": 1.5,
+                "probability": 0.45,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_U360757540",
+        "customer_name": "Aditya Pandey",
+        "customer_phone": "+919966166331",
+        "customer_email": "aditya.pandey@example.com",
+        "amount": 371.76,
+        "failure_category": "AUTHENTICATION_HARD",
+        "failure_reason": "INVALID_PIN",
+        "timestamp": "2026-08-28T08:02:04.332617",
+        "status": "FAILED",
+        "total_cost": 1.75,
+        "attempts_made": 3,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "EMAIL_UPDATE_METHOD",
+                "cost": 0.05,
+                "probability": 0.28,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "WHATSAPP_UPDATE_METHOD",
+                "cost": 1.5,
+                "probability": 0.14,
+                "success": false
+            },
+            {
+                "attempt": 3,
+                "action": "SMS_UPDATE_METHOD",
+                "cost": 0.2,
+                "probability": 0.05,
+                "success": false
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_R559967386",
+        "customer_name": "Vihaan Pandey",
+        "customer_phone": "+917176390590",
+        "customer_email": "vihaan.pandey@example.com",
+        "amount": 3201.85,
+        "failure_category": "USER_BALANCE",
+        "failure_reason": "ACCOUNT_LIMIT_EXCEEDED",
+        "timestamp": "2026-08-28T09:07:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.5,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_BALANCE_REMINDER",
+                "cost": 1.5,
+                "probability": 0.45,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_L782454310",
+        "customer_name": "Pihu Pillai",
+        "customer_phone": "+917453285987",
+        "customer_email": "pihu.pillai@example.com",
+        "amount": 556.93,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "CHOSE_TO_CANCEL",
+        "timestamp": "2026-08-28T10:48:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.5,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_LINK",
+                "cost": 1.5,
+                "probability": 0.6,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_P599154414",
+        "customer_name": "Ishaan Yadav",
+        "customer_phone": "+919311435034",
+        "customer_email": "ishaan.yadav@example.com",
+        "amount": 380.21,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "CUSTOMER_CLOSED_CHECKOUT",
+        "timestamp": "2026-08-28T12:46:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.5,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_LINK",
+                "cost": 1.5,
+                "probability": 0.6,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_Y598976917",
+        "customer_name": "Aditya Joshi",
+        "customer_phone": "+918936179853",
+        "customer_email": "aditya.joshi@example.com",
+        "amount": 160.47,
+        "failure_category": "USER_BALANCE",
+        "failure_reason": "ACCOUNT_LIMIT_EXCEEDED",
+        "timestamp": "2026-08-28T13:48:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.5,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_BALANCE_REMINDER",
+                "cost": 1.5,
+                "probability": 0.45,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_L956665975",
+        "customer_name": "Diya Reddy",
+        "customer_phone": "+919094011037",
+        "customer_email": "diya.reddy@example.com",
+        "amount": 272.44,
+        "failure_category": "USER_BALANCE",
+        "failure_reason": "ACCOUNT_LIMIT_EXCEEDED",
+        "timestamp": "2026-08-28T15:22:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.75,
+        "attempts_made": 3,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_BALANCE_REMINDER",
+                "cost": 1.5,
+                "probability": 0.45,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "EMAIL_BALANCE_REMINDER",
+                "cost": 0.05,
+                "probability": 0.22,
+                "success": false
+            },
+            {
+                "attempt": 3,
+                "action": "SMS_BALANCE_REMINDER",
+                "cost": 0.2,
+                "probability": 0.08,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_H873174285",
+        "customer_name": "Aarav Iyer",
+        "customer_phone": "+917820581106",
+        "customer_email": "aarav.iyer@example.com",
+        "amount": 1743.21,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "CHOSE_TO_CANCEL",
+        "timestamp": "2026-08-28T16:50:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.5,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_LINK",
+                "cost": 1.5,
+                "probability": 0.6,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_J337937327",
+        "customer_name": "Ira Sen",
+        "customer_phone": "+917074059253",
+        "customer_email": "ira.sen@example.com",
+        "amount": 3406.56,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "CUSTOMER_CLOSED_CHECKOUT",
+        "timestamp": "2026-08-28T18:26:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.5,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_LINK",
+                "cost": 1.5,
+                "probability": 0.6,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_X690975123",
+        "customer_name": "Aadhya Iyer",
+        "customer_phone": "+918476426754",
+        "customer_email": "aadhya.iyer@example.com",
+        "amount": 2160.59,
+        "failure_category": "USER_BALANCE",
+        "failure_reason": "ACCOUNT_LIMIT_EXCEEDED",
+        "timestamp": "2026-08-28T20:24:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.75,
+        "attempts_made": 3,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_BALANCE_REMINDER",
+                "cost": 1.5,
+                "probability": 0.45,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "EMAIL_BALANCE_REMINDER",
+                "cost": 0.05,
+                "probability": 0.22,
+                "success": false
+            },
+            {
+                "attempt": 3,
+                "action": "SMS_BALANCE_REMINDER",
+                "cost": 0.2,
+                "probability": 0.08,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_X675379544",
+        "customer_name": "Vihaan Nair",
+        "customer_phone": "+918355268102",
+        "customer_email": "vihaan.nair@example.com",
+        "amount": 163.13,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "OTP_PAGE_ABANDONED",
+        "timestamp": "2026-08-28T21:40:04.332617",
+        "status": "FAILED",
+        "total_cost": 1.75,
+        "attempts_made": 3,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_LINK",
+                "cost": 1.5,
+                "probability": 0.6,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "SMS_LINK",
+                "cost": 0.2,
+                "probability": 0.32,
+                "success": false
+            },
+            {
+                "attempt": 3,
+                "action": "EMAIL_LINK",
+                "cost": 0.05,
+                "probability": 0.1,
+                "success": false
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_D994027897",
+        "customer_name": "Riya Iyer",
+        "customer_phone": "+919563196714",
+        "customer_email": "riya.iyer@example.com",
+        "amount": 267.89,
+        "failure_category": "USER_BALANCE",
+        "failure_reason": "INSUFFICIENT_FUNDS",
+        "timestamp": "2026-08-28T23:27:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.5,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_BALANCE_REMINDER",
+                "cost": 1.5,
+                "probability": 0.45,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_B694164665",
+        "customer_name": "Aadhya Patel",
+        "customer_phone": "+918178158203",
+        "customer_email": "aadhya.patel@example.com",
+        "amount": 56.37,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "OTP_PAGE_ABANDONED",
+        "timestamp": "2026-08-29T00:47:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.5,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_LINK",
+                "cost": 1.5,
+                "probability": 0.6,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_P614015466",
+        "customer_name": "Vihaan Sharma",
+        "customer_phone": "+919465587067",
+        "customer_email": "vihaan.sharma@example.com",
+        "amount": 3887.56,
+        "failure_category": "USER_BALANCE",
+        "failure_reason": "INSUFFICIENT_FUNDS",
+        "timestamp": "2026-08-29T02:39:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.5,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_BALANCE_REMINDER",
+                "cost": 1.5,
+                "probability": 0.45,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_C719571745",
+        "customer_name": "Vihaan Gupta",
+        "customer_phone": "+918721025347",
+        "customer_email": "vihaan.gupta@example.com",
+        "amount": 437.78,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "CUSTOMER_CLOSED_CHECKOUT",
+        "timestamp": "2026-08-29T04:28:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.5,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_LINK",
+                "cost": 1.5,
+                "probability": 0.6,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_R920814900",
+        "customer_name": "Shaurya Gupta",
+        "customer_phone": "+918065972034",
+        "customer_email": "shaurya.gupta@example.com",
+        "amount": 303.28,
+        "failure_category": "USER_BALANCE",
+        "failure_reason": "INSUFFICIENT_FUNDS",
+        "timestamp": "2026-08-29T05:40:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.5,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_BALANCE_REMINDER",
+                "cost": 1.5,
+                "probability": 0.45,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_J710561240",
+        "customer_name": "Prisha Singh",
+        "customer_phone": "+919527696207",
+        "customer_email": "prisha.singh@example.com",
+        "amount": 2211.7,
+        "failure_category": "USER_BALANCE",
+        "failure_reason": "INSUFFICIENT_FUNDS",
+        "timestamp": "2026-08-29T07:36:04.332617",
+        "status": "FAILED",
+        "total_cost": 1.75,
+        "attempts_made": 3,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_BALANCE_REMINDER",
+                "cost": 1.5,
+                "probability": 0.45,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "EMAIL_BALANCE_REMINDER",
+                "cost": 0.05,
+                "probability": 0.22,
+                "success": false
+            },
+            {
+                "attempt": 3,
+                "action": "SMS_BALANCE_REMINDER",
+                "cost": 0.2,
+                "probability": 0.08,
+                "success": false
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_F357553274",
+        "customer_name": "Reyansh Joshi",
+        "customer_phone": "+919836517266",
+        "customer_email": "reyansh.joshi@example.com",
+        "amount": 38.56,
+        "failure_category": "TECHNICAL_TRANSIENT",
+        "failure_reason": "NETWORK_LATENCY_EXCEEDED",
+        "timestamp": "2026-08-29T08:50:04.332617",
+        "status": "SKIPPED",
+        "total_cost": 0.0,
+        "attempts_made": 0,
+        "history": [
+            {
+                "attempt": 0,
+                "action": "SKIP",
+                "cost": 0.0,
+                "probability": 0.0,
+                "success": false,
+                "reason": "Amount Rs 38.56 is below Rs 50.00 threshold"
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_H409350265",
+        "customer_name": "Kiara Pillai",
+        "customer_phone": "+918250949136",
+        "customer_email": "kiara.pillai@example.com",
+        "amount": 24.82,
+        "failure_category": "USER_BALANCE",
+        "failure_reason": "INSUFFICIENT_FUNDS",
+        "timestamp": "2026-08-29T10:23:04.332617",
+        "status": "SKIPPED",
+        "total_cost": 0.0,
+        "attempts_made": 0,
+        "history": [
+            {
+                "attempt": 0,
+                "action": "SKIP",
+                "cost": 0.0,
+                "probability": 0.0,
+                "success": false,
+                "reason": "Amount Rs 24.82 is below Rs 50.00 threshold"
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_G556489494",
+        "customer_name": "Ishaan Pandey",
+        "customer_phone": "+919839759520",
+        "customer_email": "ishaan.pandey@example.com",
+        "amount": 15.27,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "OTP_PAGE_ABANDONED",
+        "timestamp": "2026-08-29T12:48:04.332617",
+        "status": "SKIPPED",
+        "total_cost": 0.0,
+        "attempts_made": 0,
+        "history": [
+            {
+                "attempt": 0,
+                "action": "SKIP",
+                "cost": 0.0,
+                "probability": 0.0,
+                "success": false,
+                "reason": "Amount Rs 15.27 is below Rs 50.00 threshold"
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_Z430295664",
+        "customer_name": "Arjun Gupta",
+        "customer_phone": "+917256143439",
+        "customer_email": "arjun.gupta@example.com",
+        "amount": 169.53,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "CHOSE_TO_CANCEL",
+        "timestamp": "2026-08-29T13:43:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.5,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_LINK",
+                "cost": 1.5,
+                "probability": 0.6,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_R630208579",
+        "customer_name": "Shaurya Das",
+        "customer_phone": "+918169288485",
+        "customer_email": "shaurya.das@example.com",
+        "amount": 260.91,
+        "failure_category": "USER_BALANCE",
+        "failure_reason": "ACCOUNT_LIMIT_EXCEEDED",
+        "timestamp": "2026-08-29T15:41:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.5,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_BALANCE_REMINDER",
+                "cost": 1.5,
+                "probability": 0.45,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_H824022357",
+        "customer_name": "Kiara Joshi",
+        "customer_phone": "+917111088881",
+        "customer_email": "kiara.joshi@example.com",
+        "amount": 3805.4,
+        "failure_category": "TECHNICAL_TRANSIENT",
+        "failure_reason": "BANK_SYSTEM_TIMEOUT",
+        "timestamp": "2026-08-29T16:50:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 0.0,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "AUTO_RETRY",
+                "cost": 0.0,
+                "probability": 0.7,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_Y288109614",
+        "customer_name": "Ishaan Pandey",
+        "customer_phone": "+917172793727",
+        "customer_email": "ishaan.pandey@example.com",
+        "amount": 3525.27,
+        "failure_category": "AUTHENTICATION_HARD",
+        "failure_reason": "INCORRECT_OTP",
+        "timestamp": "2026-08-29T19:09:04.332617",
+        "status": "FAILED",
+        "total_cost": 1.75,
+        "attempts_made": 3,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "EMAIL_UPDATE_METHOD",
+                "cost": 0.05,
+                "probability": 0.28,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "WHATSAPP_UPDATE_METHOD",
+                "cost": 1.5,
+                "probability": 0.14,
+                "success": false
+            },
+            {
+                "attempt": 3,
+                "action": "SMS_UPDATE_METHOD",
+                "cost": 0.2,
+                "probability": 0.05,
+                "success": false
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_P197970787",
+        "customer_name": "Riya Chatterjee",
+        "customer_phone": "+919726379588",
+        "customer_email": "riya.chatterjee@example.com",
+        "amount": 1316.7,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "OTP_PAGE_ABANDONED",
+        "timestamp": "2026-08-29T20:49:04.332617",
+        "status": "FAILED",
+        "total_cost": 1.75,
+        "attempts_made": 3,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_LINK",
+                "cost": 1.5,
+                "probability": 0.6,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "SMS_LINK",
+                "cost": 0.2,
+                "probability": 0.32,
+                "success": false
+            },
+            {
+                "attempt": 3,
+                "action": "EMAIL_LINK",
+                "cost": 0.05,
+                "probability": 0.1,
+                "success": false
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_P409471503",
+        "customer_name": "Sai Kumar",
+        "customer_phone": "+918768002206",
+        "customer_email": "sai.kumar@example.com",
+        "amount": 97.07,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "OTP_PAGE_ABANDONED",
+        "timestamp": "2026-08-29T22:17:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.5,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_LINK",
+                "cost": 1.5,
+                "probability": 0.6,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_Q985758835",
+        "customer_name": "Diya Mehta",
+        "customer_phone": "+918735918651",
+        "customer_email": "diya.mehta@example.com",
+        "amount": 191.53,
+        "failure_category": "AUTHENTICATION_HARD",
+        "failure_reason": "INCORRECT_OTP",
+        "timestamp": "2026-08-30T00:04:04.332617",
+        "status": "FAILED",
+        "total_cost": 1.75,
+        "attempts_made": 3,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "EMAIL_UPDATE_METHOD",
+                "cost": 0.05,
+                "probability": 0.28,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "WHATSAPP_UPDATE_METHOD",
+                "cost": 1.5,
+                "probability": 0.14,
+                "success": false
+            },
+            {
+                "attempt": 3,
+                "action": "SMS_UPDATE_METHOD",
+                "cost": 0.2,
+                "probability": 0.05,
+                "success": false
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_O916033628",
+        "customer_name": "Ananya Yadav",
+        "customer_phone": "+919141011556",
+        "customer_email": "ananya.yadav@example.com",
+        "amount": 134.41,
+        "failure_category": "USER_BALANCE",
+        "failure_reason": "ACCOUNT_LIMIT_EXCEEDED",
+        "timestamp": "2026-08-30T01:25:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.5,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_BALANCE_REMINDER",
+                "cost": 1.5,
+                "probability": 0.45,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_T958256589",
+        "customer_name": "Ira Mehta",
+        "customer_phone": "+917123993296",
+        "customer_email": "ira.mehta@example.com",
+        "amount": 179.61,
+        "failure_category": "TECHNICAL_TRANSIENT",
+        "failure_reason": "NETWORK_LATENCY_EXCEEDED",
+        "timestamp": "2026-08-30T03:01:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 0.0,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "AUTO_RETRY",
+                "cost": 0.0,
+                "probability": 0.7,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_D795472980",
+        "customer_name": "Aditya Rao",
+        "customer_phone": "+917487311805",
+        "customer_email": "aditya.rao@example.com",
+        "amount": 298.51,
+        "failure_category": "USER_BALANCE",
+        "failure_reason": "ACCOUNT_LIMIT_EXCEEDED",
+        "timestamp": "2026-08-30T04:26:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.75,
+        "attempts_made": 3,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_BALANCE_REMINDER",
+                "cost": 1.5,
+                "probability": 0.45,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "EMAIL_BALANCE_REMINDER",
+                "cost": 0.05,
+                "probability": 0.22,
+                "success": false
+            },
+            {
+                "attempt": 3,
+                "action": "SMS_BALANCE_REMINDER",
+                "cost": 0.2,
+                "probability": 0.08,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_O691916368",
+        "customer_name": "Pihu Pillai",
+        "customer_phone": "+919028168523",
+        "customer_email": "pihu.pillai@example.com",
+        "amount": 367.44,
+        "failure_category": "TECHNICAL_TRANSIENT",
+        "failure_reason": "NETWORK_LATENCY_EXCEEDED",
+        "timestamp": "2026-08-30T05:48:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 0.0,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "AUTO_RETRY",
+                "cost": 0.0,
+                "probability": 0.7,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_Z645179180",
+        "customer_name": "Aditya Joshi",
+        "customer_phone": "+918782164134",
+        "customer_email": "aditya.joshi@example.com",
+        "amount": 445.7,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "CHOSE_TO_CANCEL",
+        "timestamp": "2026-08-30T07:30:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.5,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_LINK",
+                "cost": 1.5,
+                "probability": 0.6,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_R620057604",
+        "customer_name": "Riya Pillai",
+        "customer_phone": "+917638212450",
+        "customer_email": "riya.pillai@example.com",
+        "amount": 4268.64,
+        "failure_category": "USER_BALANCE",
+        "failure_reason": "ACCOUNT_LIMIT_EXCEEDED",
+        "timestamp": "2026-08-30T09:13:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.5,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_BALANCE_REMINDER",
+                "cost": 1.5,
+                "probability": 0.45,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_H932734539",
+        "customer_name": "Reyansh Rao",
+        "customer_phone": "+919455852189",
+        "customer_email": "reyansh.rao@example.com",
+        "amount": 469.78,
+        "failure_category": "USER_DROPOFF",
+        "failure_reason": "CHOSE_TO_CANCEL",
+        "timestamp": "2026-08-30T10:45:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 1.5,
+        "attempts_made": 1,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "WHATSAPP_LINK",
+                "cost": 1.5,
+                "probability": 0.6,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_U263321843",
+        "customer_name": "Aanya Das",
+        "customer_phone": "+919850521812",
+        "customer_email": "aanya.das@example.com",
+        "amount": 461.04,
+        "failure_category": "TECHNICAL_TRANSIENT",
+        "failure_reason": "NETWORK_LATENCY_EXCEEDED",
+        "timestamp": "2026-08-30T12:47:04.332617",
+        "status": "RECOVERED",
+        "total_cost": 0.0,
+        "attempts_made": 2,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "AUTO_RETRY",
+                "cost": 0.0,
+                "probability": 0.7,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "AUTO_RETRY",
+                "cost": 0.0,
+                "probability": 0.62,
+                "success": true
+            }
+        ]
+    },
+    {
+        "transaction_id": "pay_O116479358",
+        "customer_name": "Vihaan Sen",
+        "customer_phone": "+917428258482",
+        "customer_email": "vihaan.sen@example.com",
+        "amount": 315.58,
+        "failure_category": "AUTHENTICATION_HARD",
+        "failure_reason": "CARD_EXPIRED",
+        "timestamp": "2026-08-30T14:06:04.332617",
+        "status": "FAILED",
+        "total_cost": 1.75,
+        "attempts_made": 3,
+        "history": [
+            {
+                "attempt": 1,
+                "action": "EMAIL_UPDATE_METHOD",
+                "cost": 0.05,
+                "probability": 0.28,
+                "success": false
+            },
+            {
+                "attempt": 2,
+                "action": "WHATSAPP_UPDATE_METHOD",
+                "cost": 1.5,
+                "probability": 0.14,
+                "success": false
+            },
+            {
+                "attempt": 3,
+                "action": "SMS_UPDATE_METHOD",
+                "cost": 0.2,
+                "probability": 0.05,
+                "success": false
+            }
+        ]
+    }
+]
