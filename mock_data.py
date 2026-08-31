@@ -88,6 +88,7 @@ def generate_mock_data():
             "customer_name": name,
             "customer_phone": phone,
             "customer_email": email,
+            "bank": random.choice(["HDFC", "SBI", "ICICI", "Axis"]),
             "retry_count": 0
         })
         

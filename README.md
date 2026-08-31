@@ -47,3 +47,23 @@ Tested across a synthetic batch of 100 failed payment webhooks:
 │
 ▼
 [Audit Ledger & Metrics UI]      -->
+## 🚀 Quickstart & Local Setup
+
+```bash
+# 1. Clone repository
+git clone <YOUR_REPO_URL>
+cd smart-dunning-ai
+
+# 2. Setup Virtual Environment
+python -m venv venv
+source venv/bin/activate  # On Windows: .\venv\Scripts\Activate.ps1
+
+# 3. Install Dependencies
+pip install -r requirements.txt
+
+# 4. Generate Data & Run Benchmark
+python mock_data.py
+python eval.py
+
+# 5. Launch Dashboard
+streamlit run app.py
