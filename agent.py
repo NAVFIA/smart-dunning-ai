@@ -1,4 +1,5 @@
 import hashlib
+from datetime import datetime, timedelta
 
 # Cost of notification actions (in Indian Rupees - INR)
 ACTION_COSTS = {
@@ -17,7 +18,9 @@ ACTION_COSTS = {
     "EMAIL_ALERT": 0.05,
     "WHATSAPP_UPI_FALLBACK": 1.50,
     "SMS_UPI_FALLBACK": 0.20,
-    "EMAIL_UPI_FALLBACK": 0.05
+    "EMAIL_UPI_FALLBACK": 0.05,
+    "WHATSAPP_VIP_WHITEGLOVE": 1.50,
+    "WHATSAPP_CHURN_RECOVERY": 1.50
 }
 
 class BankTelemetry:
@@ -41,16 +44,99 @@ class BankTelemetry:
     def get_upi_rate(self, handle: str) -> float:
         return self.upi_rates.get(handle, 0.80)
 
+class RetryWindowOptimizer:
+    """
+    Simulates intelligent retry scheduling based on bank downtime patterns,
+    salary credit windows (1st-5th of month), and user engagement profiles.
+    """
+    @staticmethod
+    def get_optimal_window(timestamp_str: str, category: str, bank: str, amount: float) -> dict:
+        try:
+            dt = datetime.fromisoformat(timestamp_str)
+        except Exception:
+            dt = datetime.now()
+            
+        day = dt.day
+        hour = dt.hour
+        
+        # 1. Salary Credit Liquidity Window (1st to 5th of month for balance dropoffs)
+        if category == "USER_BALANCE" and 1 <= day <= 5:
+            return {
+                "window_label": "Salary Credit Liquidity Window (09:30 AM - 11:30 AM)",
+                "scheduled_time": "Next day 09:30 AM",
+                "delay_minutes": 120,
+                "strategy": "SALARY_CYCLE_ALIGNMENT",
+                "reasoning": "High liquidity window following monthly salary disbursement cycle."
+            }
+            
+        # 2. Nocturnal Core Banking Maintenance Avoidance (12:00 AM - 05:00 AM)
+        if 0 <= hour <= 5:
+            return {
+                "window_label": "Morning Settlement Window (10:00 AM - 11:30 AM)",
+                "scheduled_time": "Today 10:00 AM",
+                "delay_minutes": max(15, (10 - hour) * 60),
+                "strategy": "MAINTENANCE_AVOIDANCE",
+                "reasoning": f"Bypasses midnight core-banking maintenance downtime on {bank} CBS."
+            }
+            
+        # 3. Technical Transient (Gateway / Network timeouts)
+        if category == "TECHNICAL_TRANSIENT":
+            sched = (dt + timedelta(minutes=15)).strftime("%I:%M %p")
+            return {
+                "window_label": "Dynamic Cool-off Window (+15 mins)",
+                "scheduled_time": f"Immediate +15m ({sched})",
+                "delay_minutes": 15,
+                "strategy": "EXPONENTIAL_LATENCY_COOLOFF",
+                "reasoning": f"Allows {bank} gateway latency to stabilize and queue to drain."
+            }
+            
+        # 4. User Dropoff (Hot checkout intent)
+        if category == "USER_DROPOFF":
+            return {
+                "window_label": "Hot Intent Window (< 3 mins)",
+                "scheduled_time": "Immediate (< 3 mins)",
+                "delay_minutes": 3,
+                "strategy": "HOT_INTENT_RECAPTURE",
+                "reasoning": "Recaptures active checkout intent before customer leaves session."
+            }
+            
+        # 5. Default Business Hours Peak
+        return {
+            "window_label": "High-Throughput Business Window (02:00 PM - 05:00 PM)",
+            "scheduled_time": "Optimal Peak (02:30 PM)",
+            "delay_minutes": 30,
+            "strategy": "STANDARD_OPTIMIZED",
+            "reasoning": "Optimized for high UPI server throughput and peak customer availability."
+        }
+
 class SmartDunningAgent:
     def __init__(self, min_amount_threshold=20.0, max_retries=3, telemetry=None):
         self.min_amount_threshold = min_amount_threshold
         self.max_retries = max_retries
         self.telemetry = telemetry or BankTelemetry()
+        self.optimizer = RetryWindowOptimizer()
 
-    def get_action_for_attempt(self, category: str, attempt: int) -> str:
+    def get_action_for_attempt(self, category: str, attempt: int, tier: str = "REGULAR", amount: float = 100.0) -> str:
         """
-        Determines the recovery action based on failure category and current attempt index (0-indexed).
+        Determines the recovery action based on failure category, attempt index, and customer tier.
         """
+        # Low-margin protection: If amount < Rs 100 and Regular tier, prioritize low-cost SMS / silent retries
+        if amount < 100.0 and tier == "REGULAR":
+            if attempt == 0:
+                return "AUTO_RETRY"
+            elif attempt == 1:
+                return "SMS_LINK"
+            else:
+                return "EMAIL_LINK"
+                
+        # VIP High-LTV customers get priority White-Glove WhatsApp routing
+        if tier == "VIP_HIGH_LTV" and attempt == 0:
+            return "WHATSAPP_VIP_WHITEGLOVE"
+            
+        # High Churn Risk customers receive urgent dedicated WhatsApp re-engagement
+        if tier == "HIGH_CHURN_RISK" and attempt == 0:
+            return "WHATSAPP_CHURN_RECOVERY"
+
         if category == "TECHNICAL_TRANSIENT":
             if attempt < 2:
                 return "AUTO_RETRY"
@@ -83,43 +169,60 @@ class SmartDunningAgent:
                 
         return "EMAIL_ALERT"
 
-    def get_recovery_probability(self, category: str, action: str, attempt: int) -> float:
+    def get_recovery_probability(self, category: str, action: str, attempt: int, tier: str = "REGULAR") -> float:
         """
-        Calculates recovery success probability based on failure category, action taken, and attempt count.
+        Calculates recovery success probability based on failure category, action taken, attempt count, and customer tier.
         """
         decay = attempt * 0.08
         
+        # Base probabilities
         if category == "TECHNICAL_TRANSIENT":
             if action == "AUTO_RETRY":
-                return max(0.20, 0.70 - decay)
+                prob = max(0.20, 0.70 - decay)
             elif action == "SMS_ALERT":
-                return max(0.15, 0.40 - decay)
+                prob = max(0.15, 0.40 - decay)
+            else:
+                prob = max(0.20, 0.65 - decay)
                 
         elif category == "USER_DROPOFF":
             if "WHATSAPP" in action:
-                return max(0.20, 0.60 - decay)
+                prob = max(0.20, 0.60 - decay)
             elif "SMS" in action:
-                return max(0.15, 0.40 - decay)
+                prob = max(0.15, 0.40 - decay)
             elif "EMAIL" in action:
-                return max(0.10, 0.25 - decay)
+                prob = max(0.10, 0.25 - decay)
+            else:
+                prob = max(0.15, 0.45 - decay)
                 
         elif category == "USER_BALANCE":
             if "WHATSAPP" in action:
-                return max(0.15, 0.45 - decay)
+                prob = max(0.15, 0.45 - decay)
             elif "EMAIL" in action:
-                return max(0.10, 0.30 - decay)
+                prob = max(0.10, 0.30 - decay)
             elif "SMS" in action:
-                return max(0.08, 0.20 - decay)
+                prob = max(0.08, 0.20 - decay)
+            else:
+                prob = max(0.10, 0.35 - decay)
                 
         elif category == "AUTHENTICATION_HARD":
             if "EMAIL" in action:
-                return max(0.08, 0.28 - decay)
+                prob = max(0.08, 0.28 - decay)
             elif "WHATSAPP" in action:
-                return max(0.08, 0.22 - decay)
+                prob = max(0.08, 0.22 - decay)
             elif "SMS" in action:
-                return max(0.05, 0.15 - decay)
-                
-        return max(0.05, 0.15 - decay)
+                prob = max(0.05, 0.15 - decay)
+            else:
+                prob = max(0.05, 0.15 - decay)
+        else:
+            prob = max(0.05, 0.15 - decay)
+
+        # Tier-based responsiveness adjustments
+        if tier == "VIP_HIGH_LTV":
+            prob = min(0.95, prob + 0.12)  # VIPs have high brand affinity and responsive payment habits
+        elif tier == "HIGH_CHURN_RISK":
+            prob = max(0.10, prob - 0.05)  # Higher drop-off propensity
+
+        return prob
 
     def is_recovery_successful(self, tx_id: str, attempt: int, probability: float) -> bool:
         """
@@ -141,6 +244,13 @@ class SmartDunningAgent:
         amount = transaction["amount"]
         category = transaction["failure_category"]
         bank = transaction.get("bank", "HDFC")
+        tier = transaction.get("customer_tier", "REGULAR")
+        ltv = transaction.get("customer_ltv", 15000.0)
+        churn_risk = transaction.get("churn_risk_score", 0.35)
+        timestamp = transaction.get("timestamp", datetime.now().isoformat())
+        
+        # Calculate dynamic retry window recommendation
+        retry_window = self.optimizer.get_optimal_window(timestamp, category, bank, amount)
         
         result = {
             "transaction_id": tx_id,
@@ -149,9 +259,15 @@ class SmartDunningAgent:
             "customer_email": transaction["customer_email"],
             "amount": amount,
             "bank": bank,
+            "customer_ltv": ltv,
+            "customer_tier": tier,
+            "churn_risk_score": churn_risk,
             "failure_category": category,
             "failure_reason": transaction["failure_reason"],
-            "timestamp": transaction["timestamp"],
+            "timestamp": timestamp,
+            "optimal_retry_window": retry_window["window_label"],
+            "scheduled_time": retry_window["scheduled_time"],
+            "window_reasoning": retry_window["reasoning"],
             "status": "PENDING",
             "total_cost": 0.0,
             "attempts_made": 0,
@@ -186,7 +302,7 @@ class SmartDunningAgent:
             
         # 3. Dunning Lifecycle Execution (Hard cap at 3 attempts)
         for attempt in range(min(self.max_retries, 3)):
-            action = self.get_action_for_attempt(category, attempt)
+            action = self.get_action_for_attempt(category, attempt, tier=tier, amount=amount)
             
             # Check bank health
             bank_rate = self.telemetry.get_bank_rate(bank)
@@ -212,8 +328,10 @@ class SmartDunningAgent:
                 else:
                     fallback_handle = "@paytm"
                 
-                # Reroute action to fallback payment link
-                if "WHATSAPP" in action or action == "AUTO_RETRY":
+                # Reroute action to fallback payment link based on tier
+                if tier == "VIP_HIGH_LTV":
+                    action = "WHATSAPP_VIP_WHITEGLOVE"
+                elif "WHATSAPP" in action or action == "AUTO_RETRY":
                     action = "WHATSAPP_UPI_FALLBACK"
                 elif "SMS" in action:
                     action = "SMS_UPI_FALLBACK"
@@ -222,21 +340,32 @@ class SmartDunningAgent:
                 
                 cost = ACTION_COSTS.get(action, 0.0)
                 
-                # Fallback success probability is determined by the UPI handle success rate, minus attempt decay
+                # Fallback success probability is determined by the UPI handle success rate + tier bonus
                 upi_rate = self.telemetry.get_upi_rate(fallback_handle)
                 decay = attempt * 0.08
-                prob = max(0.20, upi_rate - decay)
+                tier_bonus = 0.08 if tier == "VIP_HIGH_LTV" else 0.0
+                prob = min(0.96, max(0.20, upi_rate - decay + tier_bonus))
             else:
                 cost = ACTION_COSTS.get(action, 0.0)
-                prob = self.get_recovery_probability(category, action, attempt)
+                prob = self.get_recovery_probability(category, action, attempt, tier=tier)
             
             # Simulate recovery
             success = self.is_recovery_successful(tx_id, attempt, prob)
             
             # Generate fallback link & localized messages
             fallback_link = f"https://razorpay.me/fallback/pay_{tx_id}?rail=upi&bank={fallback_bank or bank}"
-            msg_en = f"Hi {transaction['customer_name']}, {bank} servers are currently experiencing high latency. Tap here to complete your payment instantly using PhonePe/Paytm/UPI: {fallback_link}"
-            msg_hi = f"Hey {transaction['customer_name']}, {bank} ke server slow hain. Yahan tap karke PhonePe/Paytm se bina kisi issue ke complete karein: {fallback_link}"
+            
+            # Contextual & localized message generation
+            cust_name = transaction["customer_name"]
+            if tier == "VIP_HIGH_LTV":
+                msg_en = f"Hi {cust_name}, as our valued VIP patron, we noticed {bank} servers are running slow. Tap here for your priority 1-click UPI instant completion: {fallback_link}"
+                msg_hi = f"Hey {cust_name}, aap hamare VIP member hain aur {bank} ke servers slow hain. Yahan tap karke PhonePe/Paytm se 1-click me payment complete karein: {fallback_link}"
+            elif tier == "HIGH_CHURN_RISK":
+                msg_en = f"Hi {cust_name}, your order payment of ₹{amount:,.2f} on {bank} had a hiccup. Tap here to complete securely in 1 click via UPI before timeout: {fallback_link}"
+                msg_hi = f"Hey {cust_name}, aapka ₹{amount:,.2f} payment {bank} pe atak gaya. Session expire hone se pehle yahan tap karke UPI se instantly complete karein: {fallback_link}"
+            else:
+                msg_en = f"Hi {cust_name}, {bank} servers are currently experiencing latency. Tap here to complete your payment instantly using PhonePe/Paytm/UPI: {fallback_link}"
+                msg_hi = f"Hey {cust_name}, {bank} ke server slow hain. Yahan tap karke PhonePe/Paytm se bina kisi issue ke complete karein: {fallback_link}"
             
             attempt_info = {
                 "attempt": attempt + 1,
@@ -249,7 +378,9 @@ class SmartDunningAgent:
                 "fallback_handle": fallback_handle,
                 "message_english": msg_en,
                 "message_hinglish": msg_hi,
-                "fallback_link": fallback_link
+                "fallback_link": fallback_link,
+                "scheduled_time": retry_window["scheduled_time"],
+                "strategy": retry_window["strategy"]
             }
             
             result["history"].append(attempt_info)

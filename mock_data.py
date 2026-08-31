@@ -47,7 +47,6 @@ def generate_mock_data():
     
     for i in range(100):
         # Determine failure category with realistic weights
-        # Technical Transient: 25%, User Dropoff: 30%, User Balance: 30%, Hard Auth: 15%
         cat_roll = random.random()
         if cat_roll < 0.25:
             category = "TECHNICAL_TRANSIENT"
@@ -75,6 +74,24 @@ def generate_mock_data():
         email = f"{first_name.lower()}.{last_name.lower()}@example.com"
         phone = generate_phone()
         
+        # Customer LTV & Tiering Profile Generation
+        tier_roll = random.random()
+        if tier_roll < 0.25:
+            tier = "VIP_HIGH_LTV"
+            ltv = round(random.uniform(35000.0, 125000.0), 2)
+            past_txns = random.randint(12, 48)
+            churn_risk = round(random.uniform(0.05, 0.25), 2)
+        elif tier_roll < 0.50:
+            tier = "HIGH_CHURN_RISK"
+            ltv = round(random.uniform(3000.0, 18000.0), 2)
+            past_txns = random.randint(1, 4)
+            churn_risk = round(random.uniform(0.70, 0.95), 2)
+        else:
+            tier = "REGULAR"
+            ltv = round(random.uniform(8000.0, 32000.0), 2)
+            past_txns = random.randint(5, 15)
+            churn_risk = round(random.uniform(0.25, 0.60), 2)
+            
         # Space out transaction times across the last 7 days
         timestamp = (base_time + timedelta(hours=i * 1.6, minutes=random.randint(0, 59))).isoformat()
         
@@ -89,13 +106,17 @@ def generate_mock_data():
             "customer_phone": phone,
             "customer_email": email,
             "bank": random.choice(["HDFC", "SBI", "ICICI", "Axis"]),
+            "customer_ltv": ltv,
+            "customer_tier": tier,
+            "past_successful_txns": past_txns,
+            "churn_risk_score": churn_risk,
             "retry_count": 0
         })
         
     with open("data/failed_payments.json", "w") as f:
         json.dump(records, f, indent=4)
         
-    print(f"Generated 100 failed payment records and saved to data/failed_payments.json")
+    print(f"Generated 100 failed payment records with customer LTV/tier profiles and saved to data/failed_payments.json")
 
 if __name__ == "__main__":
     generate_mock_data()
